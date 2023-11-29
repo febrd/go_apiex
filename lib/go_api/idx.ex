@@ -23,17 +23,13 @@ defmodule GoApi.Idx do
     get_api_params("stock/idx/#{symbol}/profile?&api_key=#{@api_key_stock}")
   end
 
-  #use commas for multiple prices Example: BBRI,BBCA
-  def prices(symbol \\ "BBCA") do
-    get_api_params("stock/idx/prices?symbols=#{symbol}&api_key=#{@api_key_stock}")
-  end
 
   def emitent_detail(emitent_symbol \\ "BMRI") do
     get_api_params("stock/idx/#{emitent_symbol}/profile?api_key=#{@api_key_stock}")
   end
 
 
-  def stock_prices(symbol_list \\ "BBRI,BBCA") do
+  def prices(symbol_list \\ "BBRI,BBCA") do
     get_api_params("stock/idx/prices?symbols=#{symbol_list}&api_key=#{@api_key_stock}")
   end
 
@@ -61,7 +57,7 @@ defmodule GoApi.Idx do
     get_api_params("stock/idx/#{symbol}/broker_summary?date=#{date}&api_key=#{@api_key_stock}")
   end
 
-  def indicators(%{"limit_page" => limit_pages, "date" => date} \\ %{"limit_page" => "", "date" => ""}) do
+  def indicators(%{"limit_page" => limit_pages, "date" => date} \\ %{"limit_page" => "1", "date" => ""}) do
   get_api_params("stock/idx/indicators?page=#{limit_pages}&date=#{date}&api_key=#{@api_key_stock}")
   end
 

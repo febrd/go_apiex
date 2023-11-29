@@ -27,27 +27,27 @@ defmodule GoApi.Spv do
     handle_update(endpoint, state)
   end
 
-  def e_ipo(state) do
+  def e_ipo(state \\ nil) do
     handle_update("e-ipo", state)
   end
 
-  def trending(state) do
+  def trending(state \\ nil) do
     handle_update("trending", state)
   end
 
-  def top_gainers(state) do
+  def top_gainers(state \\ nil) do
     handle_update("top_gainer", state)
   end
 
-  def top_losers(state) do
+  def top_losers(state \\ nil) do
     handle_update("top_loser", state)
   end
 
-  def companies(state) do
+  def companies(state \\nil) do
     handle_update("companies", state)
   end
 
-  def indices(state) do
+  def indices(state \\ nil) do
     handle_update("indices", state)
   end
 
