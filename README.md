@@ -1,4 +1,4 @@
-# GoApi Hexdocs Package
+# GoApi Hex.pm Package
 
 ## Installation
 adding `go_api` to your list of dependencies in `mix.exs`:
@@ -11,7 +11,7 @@ def deps do
 end
 ```
 ## Configuration
-Adding some configuration in your config/config.exs or mix.exs:
+Adding some configuration in your config/config.exs:
 ```elixir
 
   # Setting up URL & APIKEY
